@@ -1,0 +1,52 @@
+/*APARIENCIA DE LA CONSOLA DE INICIO DE LOS REGISTROS*/
+*{
+  /*Lineamientos generales*/
+    margin: 5px;/*Inicio de l margen*/
+    padding: 0px;/*Separacion entre cada elemento*/
+    box-sizing: border-box;/*Tamaño de la caja de texto*/
+}
+/*Apariencia del panel trasero*/
+body{
+    background-image: url(https://st4.depositphotos.com/26892764/39535/v/450/depositphotos_395354608-stock-illustration-word-equal-sign-language-two.jpg);
+    background-size:5.3cm;
+}
+/*Contenedor principal de datos*/
+.container_principal{
+    margin:  600px;
+    padding: 10px;
+    background-color: white;
+    background-position: center;
+    margin: 10cm;
+    margin-top: 150px;
+}
+/*Apariencia del cuadro de registro*/
+.titulo{
+    text-align: center;
+    border: solid white;
+    color: white;
+    background: rgb(210, 134, 186);
+}
+.Container{
+    text-align: center;
+    background-position: center;
+    background-color: rgb(222, 167, 194);
+    border-style:none;
+}
+/*Apariencia de los cuadro de texto*/
+.Registro_del_nombre,.Ingreso_de_E-mail,.Ingreso_de_usuario,.Ingreso_de_contraseña,.Registro_del_apellido{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+/*Tamaño del display de texto*/
+input{
+    padding: 5px;
+}
+input:focus{
+    outline: solid;
+}
+.button{
+    background-color: white;
+    border-bottom: none;
+    color: black;
+}

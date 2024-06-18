@@ -1,0 +1,58 @@
+<!-- #REGISTRO DE INFROMACION DE LOS USUARIOS -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Nombre de la pagina en el buscador de Chrome -->
+    <title>Registro de usuarios</title>
+    <!-- Enlaza el editor de apariencia con el programa principal -->
+    <link rel="stylesheet" href="estilo.css">
+    <title>{{ title }}</title>
+    <style>
+        body {
+            font-family: 'BoldItalic', sans-serif;
+        }
+
+    </style>
+</head>
+<!-- CUERPO DEL PROGRAMA INICIAL -->
+<body>
+    <!-- Contiene todos los datos de la pantalla principal -->
+    <div class="container_principal">
+        <form action="/register" class="formulario_de_registro" method="post">
+            <h2 class="titulo">REGISTRO DE USUARIOS</h2>
+            <!-- Contiene todos los datos a recibir por parte del usuario -->
+            <div class="Container">
+                <div class="Registro_del_nombre">
+                    <label for="">Nombre:</label>
+                    <input type="text" name="nombre">
+                </div>
+                <div class="Registro_del_apellido">
+                    <label for="">Apellidos:</label>
+                    <input type="text" name="apellido">
+                </div>
+                <div class="Ingreso_de_E-mail">
+                    <label for="">Ingrese un correo electronico:</label>
+                    <input type="email" name="email">
+                </div>
+                <div class="Ingreso_de_usuario">
+                    <label for="">Nombre de usuario:</label>
+                    <input type="usuario" name="usuario">
+                </div>
+                <div class="Ingreso_de_contraseña">
+                    <label for="">Contraseña:</label>
+                    <input type="password" name="password">
+                </div>
+                <!-- Para las cuentas existentes manda a otro link -->
+                <div class="Para_cuentas_existentes">
+                    <p>Ya tienes una cuenta? <a href=""> Inicia sesion!</a></p>
+                    <!-- Boton de registrar -->
+                    <input class="button" type="button" value="REGISTRAR">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+<!-- Termino del programa -->
