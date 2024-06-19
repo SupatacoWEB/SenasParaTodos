@@ -1,14 +1,13 @@
 from flask import Flask, request, render_template
 import mysql.connector
 from mysql.connector import Error
-dir(Flask)
 
 app = Flask(__name__)
-@app.route('https://supatacoweb.github.io/SenasParaTodos/')
+@app.route('/')
 def index():
     return render_template('index.html')
 
-@app.rout('/register', method="post") 
+@app.route('/register', method=["post"]) 
 def register():
     nombre=request.form['nombre']
     apellido=request.form['apellido']
@@ -20,9 +19,10 @@ def register():
     if conexion is not None:
         Insertardatos(conexion, 'nombre', 'apellido', 'email', 'usuario', 'password')
         conexion.close()  
-    return "Registro de datos completado con exito" 
+        return "Registro de datos completado con exito" 
+    else:
+        return "Error al conectar con la base datos"
         
-
 def Conexionbasedatos():
     try:
         conexion = mysql.connector.connect(
@@ -60,3 +60,4 @@ def Insertardatos(conexion, nombre, apellidos, email, usuario, password):
             
 if __name__ == '__main__':
     app.run(debug=True)
+
