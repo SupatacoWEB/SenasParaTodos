@@ -7,13 +7,13 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/register', method=["post"]) 
+@app.route('/register', method=["POST"]) 
 def register():
-    nombre=request.form['nombre']
-    apellido=request.form['apellido']
-    email=request.form['email']
-    usuario=request.form['usuario']
-    password=request.form['password']   
+    nombre = request.form['nombre']
+    apellido = request.form['apellido']
+    email = request.form['email']
+    usuario = request.form['usuario']
+    password = request.form['password']   
 
     conexion = Conexionbasedatos()
     if conexion is not None:
